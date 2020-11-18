@@ -3,7 +3,7 @@
   "type": [
     "web"
   ],
-  "name": "Orlo POS",
+  "name": "POS",
   "framework": "react",
   "template": "blank",
   "cssPreProcessor": false,

@@ -1,8 +1,8 @@
 {
-  "name": "orlo-pos",
+  "name": "pos",
   "private": true,
   "version": "1.0.0",
-  "description": "Orlo POS",
+  "description": "POS",
   "repository": "",
   "license": "UNLICENSED",
   "scripts": {
