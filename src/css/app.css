@@ -8,8 +8,14 @@
 }
 .body-menu {
     border: 2px solid rgb(238, 238, 238);
-    margin: 10px 10px;
     border-radius: 5px;
+    margin: 10px 10px;
+}
+
+.food__itemId{
+    border: 2px solid rgb(238, 238, 238);
+    border-radius: 5px;
+    padding:1px 5px;
 }
 .button {
     margin-top: 10px;

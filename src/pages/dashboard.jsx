@@ -30,10 +30,10 @@ import scanlogo from '../assets/images/scanlogo.png';
 
 export default class  extends React.Component {
 
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
-           
+           addedItemList : [{id:'#1234', itemName:'Chilli Paneer', itemPrice:120, quantity:4, comments:'nospice'}]
 
 
 
@@ -56,6 +56,7 @@ export default class  extends React.Component {
 
 
     render() {
+
         return (
             <Page name="Dashboard" className="dashboardpage" >
 
@@ -194,15 +195,15 @@ export default class  extends React.Component {
                     <Col width='40'>
                         <Row noGap >
                             <Col width='50'>
-                                <div class="list  zeromargin no-hairlines-md">
+                                <div className="list  zeromargin no-hairlines-md">
                                     <ul>
-                                        <li class="item-content item-input item-input-outline ">
+                                        <li className="item-content item-input item-input-outline ">
 
-                                        <div class="item-inner">
-                                            <div class="item-title item-floating-label">Name</div>
-                                            <div class="item-input-wrap">
+                                        <div className="item-inner">
+                                            <div className="item-title item-floating-label">Name</div>
+                                            <div className="item-input-wrap">
                                                 <input id="autocomplete-dropdown-expand" type="text" placeholder="Your name" />
-                                                <span class="input-clear-button"></span>
+                                                <span className="input-clear-button"></span>
                                             </div>
                                         </div>
                                         
@@ -211,15 +212,15 @@ export default class  extends React.Component {
                                 </div>
                             </Col>
                             <Col width='30'>
-                            <div class="list zeromargin no-hairlines-md">
+                            <div className="list zeromargin no-hairlines-md">
                                 <ul>
-                                    <li class="item-content item-input item-input-outline">
+                                    <li className="item-content item-input item-input-outline">
 
-                                    <div class="item-inner">
-                                        <div class="item-title item-floating-label">Name</div>
-                                        <div class="item-input-wrap">
-                                            <input id="autocomplete-dropdown-expand" type="text" placeholder="Your name" />
-                                            <span class="input-clear-button"></span>
+                                    <div className="item-inner">
+                                        <div className="item-title item-floating-label">Name</div>
+                                        <div className="item-input-wrap">
+                                            <input id="autocomplete-dropdown-expand auto" type="text" placeholder="Your name" />
+                                            <span className="input-clear-button"></span>
                                         </div>
                                     </div>
                                     
@@ -228,9 +229,51 @@ export default class  extends React.Component {
                             </div>
                             </Col>
                             <Col width='20'>
-                            <div class="list zeromargin no-hairlines-md">
-                            <button class=" button button-fill" >Add</button>
+                            <div className="list zeromargin no-hairlines-md">
+                               
+                            <button className="button button-fill" >Add&nbsp;&nbsp;<Icon size='20' f7='plus_circle_fill'></Icon></button>
                             </div>                        
+                            </Col>
+                        </Row>
+
+                        {/* Single  Item Row  */}
+                        <Row noGap>
+                            <Col width='35'>
+                                <List simple-list>
+                                <ListItem >
+                                    <Link onClick={()=>{console.log('click')}}><Icon f7='bubble_right_fill'  size='25'></Icon></Link>
+                                    Chilli Paneer
+                                    <div className="list_item">
+
+                                    </div>
+                                </ListItem>
+                               </List>
+                            </Col>
+                            <Col width='15'>
+                                <List simple-list>
+                                    <ListItem>
+                                        <Link onClick={()=>{console.log('click')}}><Icon className='icon' f7='plus_app_fill' color='gray' size='25'></Icon></Link>
+                                        &nbsp;&nbsp;<span>4</span>&nbsp;&nbsp;
+                                        <Link onClick={()=>{console.log('click')}}><Icon className='icon' f7='minus_square_fill' color='gray' size='25'></Icon></Link>
+                                    </ListItem>
+                                </List>
+                            </Col>
+                            <Col  width='10'>
+                                <List noHairlinesMd>
+                                    <ListItem>
+                                        <div className='food__itemId'>
+                                            #12434
+                                        </div>
+                                    </ListItem>
+                                </List>
+                            </Col>
+                            <Col width='25'>
+                                <List>
+                                    <ListItem>&nbsp;&nbsp;
+                                         Rs 120/-   
+                                        <Link onClick={()=>{console.log('click')}}><Icon color='red' f7='trash' size='25'></Icon></Link>
+                                    </ListItem>
+                                </List>
                             </Col>
                         </Row>
                     </Col>
